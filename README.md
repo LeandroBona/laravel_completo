@@ -2,7 +2,7 @@
 
 Para poder abrir o projeto, você precisa executar os seguintes comandos no terminal com o projeto aberto (e tendo PHP && Composer instalados em sua máquina):
 
-#### Para instalar as dependências:
+### Para instalar as dependências:
 ```bash
 composer install
 ```
@@ -32,7 +32,7 @@ php artisan serve
 create database bd_laravel;
 ```
 
-## Entrar no banco:
+### Entrar no banco:
 ```bash
 use bd_laravel;
 ```
