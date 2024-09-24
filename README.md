@@ -38,6 +38,9 @@ use bd_laravel;
 ```
 
 ## Execute o comando para realizar a migration (terminal):
+
+Para poder realizar esse processo, vocÊ precisa configurar as variáveis de ambiente do projeto no arquivo .env e informar qual banco de dados será utilizando quanto as configurações de localhost, portas, nome do banco (de acordo com o que foi criando no MYSQL) e a senha (caso precise).
+
 ```bash
 php artisan migrate
 ```
