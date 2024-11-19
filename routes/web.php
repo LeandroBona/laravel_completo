@@ -21,7 +21,19 @@ Route::get('/login', [LoginController::class, 'login'])->name('site.login');
 Route::post('/login', [LoginController::class, 'processLogin'])->name('site.login.process');
 
 
+
 // Agrupamento de rotas para área administrativa
 Route::prefix('admin')->group(function() {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/configuracoes', [PageController::class, 'dashboard'])->name('admin.dashboard');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profiles/create', [ProfileController::class, 'create'])->name('profiles.create');
+    Route::post('/profiles', [ProfileController::class, 'store'])->name('profiles.store');
+    Route::get('/profiles/{id}', [ProfileController::class, 'show'])->name('profiles.show');
+});
+
+Route::resource('profiles', ProfileController::class);
+Route::resource('posts', PostController::class);
+Route::resource('tags', TagController::class);
