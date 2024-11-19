@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Route;
 // Importando o caminho das controllers
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Contato;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\TagController;
+use App\Http\Middleware\logAcessoMiddleware;
+use App\Http\Controllers\LoginController;
 
 // Name: nomeando as rotas
 Route::get('/', [PageController::class, 'home'])->name('home');
