@@ -12,7 +12,7 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [Contato::class, 'store'])->name('contact.store');
-Route::get('/login/', [LoginController::class, 'login'])->name('site.login');
+Route::get('/login', [LoginController::class, 'login'])->name('site.login');
 Route::post('/login', [LoginController::class, 'processLogin'])->name('site.login.process');
 
 
