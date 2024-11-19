@@ -21,7 +21,10 @@
                 <!-- Link para o dashboard -->
                  <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
-            </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('site.login') }}">Login</a>
+                </li>
             </ul>
         </div>
     </div>
